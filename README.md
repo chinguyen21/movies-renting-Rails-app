@@ -4,7 +4,7 @@
 
 A movies renting application made with Ruby, Rails, Active Record and SQLite.
 
-After 1 week from finishing my first project [movies-renting-CLI](https://github.com/chinguyen21/movies-renting-CLI-app), I was excited to apply the movies renting ideas for this Rails mini project.
+After 1 week from finishing my first project [movies-renting-CLI](https://github.com/chinguyen21/movies-renting-CLI-app), I was excited to apply movies renting ideas for this Rails mini project.
 
 
 ## TOOL

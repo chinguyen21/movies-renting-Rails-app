@@ -1,0 +1,18 @@
+
+
+<h6><%= link_to 'Homepage', users_path %></h6>
+<h1>Rent a new movie</h1>
+
+<h5>
+<br>
+<%= form_for(@receipt) do |f| %>
+  
+  <label id="label">User</label><br>
+  <%= f.collection_select :user_id, User.all, :id, :name %><br><br>
+
+  <label id="label">Movies</label><br><br>
+  <%= f.collection_check_boxes :movie_id, Movie.all, :id, :name  %><br><br>
+
+  <%= f.submit "Rent" %>
+<% end %>
+</h5>

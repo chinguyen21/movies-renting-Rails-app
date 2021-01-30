@@ -1,0 +1,68 @@
+
+<h6><%= link_to 'Homepage', users_path %></h6>
+
+
+<h1><%= @user.name %></h1>
+<div>
+  <h5>Email address:  <%= @user.email_address %></h5>
+  <h5>Age: <%= @user.age%></h5>
+  <h5><%= link_to 'Edit User', edit_user_path(@user) %></h5>
+  <h5><%= link_to 'Delete User', @user, method: "delete", data: {confirm: "Are you sure to delete this user?", disable_with: "Processing..."} %></h5>
+  <h5><%= link_to 'Rent a new movie', new_receipt_path %></h5>
+  <h5><%= link_to "Write a review", new_review_path %></h5>
+  <h3>Movies Renting</h3>
+  <h5>
+      <%= "="*50 %>
+    <% if !@user.movies.empty?%>
+        <% @user.receipts.each do |receipt|%>
+          <div style="width: 70%;">
+              <div id="div_left">
+                  <img src = <%=receipt.movie.poster%> alt="official poster" width="200" height="240">
+              </div>
+              <div id="div_right"> 
+                  <h4 class="m_name"> <%= link_to receipt.movie.name, movie_path(receipt.movie)%></h4>
+                  <h4>Due Date: <%= receipt.due_date%></h4>
+                  <h4><%= form_for (receipt), method: :delete do |f| %>
+                  <%= f.submit "Return this movie"%>
+                  <%end%></h4>
+              </div>
+          </div>
+        <%end%>
+    <%else%>
+      <h3> This user haven't ever rented any movies yet! </h3>
+    <%end %>
+  </h5>
+  <h3> All reviews</h3><br>
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>MOVIE</th>
+          <th>USER</th>
+          <th>CONTENT</th>
+          <th>RATING</th>
+          <th>EDIT</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+    <% @user.reviews.each do |review| %>
+        <tr>
+          <td><%= review.movie.name %></td>
+          <td><%= review.user.name %></td>
+          <td><%= review.content %></td>
+          <td><%= review.rating %></td>
+          <td><%= link_to 'this review', edit_review_path(review) %></td>
+          <td><%= link_to "Delete", review, method: :delete, data: {confirm: "Are you sure to delete this review?"}%></td>
+        </tr>
+    <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+

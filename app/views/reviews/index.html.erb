@@ -1,0 +1,26 @@
+
+<h6><%= link_to 'Homepage', users_path %></h6>
+
+<h1> All reviews</h1>
+<br>
+<br>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>MOVIE</th>
+      <th>USER</th>
+      <th>CONTENT</th>
+      <th>RATING</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @reviews.each do |review| %>
+    <tr>
+      <td><%= review.movie.name %></td>
+      <td><%= review.user.name %></td>
+      <td><%= review.content %></td>
+      <td><%= review.rating %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

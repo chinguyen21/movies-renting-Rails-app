@@ -1,0 +1,29 @@
+
+
+<h6><%= link_to 'Homepage', users_path %></h6>
+
+<h1> All receipts</h1>
+<br>
+<br>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>RECEIPT ID</th>
+      <th>MOVIE</th>
+      <th>USER</th>
+      <th>CHECKOUT DATE</th>
+      <th>DUE DATE</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @receipts.each do |receipt| %>
+    <tr>
+      <td><%= receipt.id %></td>
+      <td><%= receipt.movie.name %></td>
+      <td><%= receipt.user.name %></td>
+      <td><%= receipt.checkout_date %></td>
+      <td><%= receipt.due_date %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

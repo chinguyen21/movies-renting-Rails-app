@@ -1,0 +1,19 @@
+
+<h1 class="style-head"> Homepage</h1>
+<br>
+<br>
+<ul class="nav">
+  <li><%= link_to "All movies", movies_path %></li>
+  <li><%= link_to "All receipts", receipts_path %></li>  
+  <li><%= link_to "All reviews", reviews_path %></li>
+  <li><%= link_to "New user", new_user_path %></li>
+  <li><%= link_to "New movie", new_movie_path %></li>
+  <li><%= link_to "Rent a new movie", new_receipt_path %></li>
+  <li><%= link_to "Write a review", new_review_path %></li>
+</ul>
+<br>
+  <h3 class="style-main">All users</h3>
+<% @users.each do |user| %>
+  <h5 id="user"><%= link_to user.name, user_path(user) %></h5>
+<% end %>
+

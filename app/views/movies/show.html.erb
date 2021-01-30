@@ -1,0 +1,21 @@
+
+<h6><%= link_to 'Homepage', users_path %></h6>
+
+
+
+<div style="width: 80%;">
+  <div id="div_left_1">
+    <img src = <%=@movie.poster%> alt="official poster" width="200" height="240">
+  </div>
+  <div id="div_right_2"> 
+    <h2><%= @movie.name%></h2>
+    <p>Premiere Date: <%= @movie.premiered_on %></p>
+    <p>IMDb: <%= link_to @movie.imdb, @movie.link_imdb, :target => '_blank'   %></p>
+    <p>    <%= link_to 'Edit Movie', edit_movie_path(@movie) %></p>
+    <p><%= link_to "Delete", movie_path(@movie), method: :delete, data: {confirm: "Are you sure to delete this movie?"}%></p>
+  </div>
+</div>
+
+<br>
+  <h5><iframe width="560" height="315" src=<%=@movie.trailer%> frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h5>
+  

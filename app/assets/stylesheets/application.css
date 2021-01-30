@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+  .style-head {
+    display: inline;
+    font-size: 50px;
+    background-color: #006B98;
+    color: #ffffff;
+    text-align: center;
+
+  }
+
+  .style-main {
+    display: inline-block;
+    font-size: 30px;
+    background-color: #006B98;
+    color: #ffffff;
+    text-align: center;
+  }
+  .styled-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+  .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    text-align: center
+}
+
+
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+
+.nav {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 25px;
+  padding: 15px;
+
+}
+
+#user {
+  font-size: 20px;
+  padding: 10px;
+  font-style: italic;
+}
+
+#error {
+  font-size: 25px;
+  color: red;
+  padding: 10px;
+  text-align: center;
+
+}
+
+#label {
+  font-size: 20px;
+  padding: 10px;
+  font-style: italic;
+}
+
+body {
+  color: #008282;
+  background-image: url('p6.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+
+h5,h1 {
+  text-align: center;
+}
+
+h3 {
+  color: red;
+  text-align: center;
+}
+
+#div_left {
+  width: 40%;
+  height: 260px;
+  float: left;
+}
+
+#div_right {
+  height: 260px;
+}
+
+.m_name {
+  font-size: 25px;
+  color: rgb(132, 0, 255);
+}
+
+#div_left_1 {
+  width: 40%;
+  height: 260px;
+  float: left;
+  margin-left: 200px;
+}
+
+#div_right_1 {
+  height: 260px;
+  margin-left: 10px;
+}

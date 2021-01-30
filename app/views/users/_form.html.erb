@@ -1,0 +1,23 @@
+
+
+<%= form_for(@user) do |f| %>
+
+   <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |message| %>
+      <h3 id="error"><%= message %></h3>
+    <% end %>
+  <% end %>
+<h5>
+  <label>Name:</label><br>
+  <%= f.text_field :name, size: "25x6"%><br><br>
+
+  <label>Email address:</label><br>
+  <%= f.email_field :email_address, size: "25x6" %><br><br>
+
+  <label>Age:</label><br>
+  <%= f.number_field :age %><br><br>
+
+  <%= f.submit %>
+<% end %>
+
+</h5>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  imdb: 1
+  premiered_on: 2020-12-12
+  poster: MyString
+
+two:
+  name: MyString
+  imdb: 1
+  premiered_on: 2020-12-12
+  poster: MyString

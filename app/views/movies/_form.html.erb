@@ -1,0 +1,33 @@
+<h5>
+<%= form_for(@movie) do |f| %>
+  <% if @movie.errors.any? %>
+    <ul>
+    <% @movie.errors.full_messages.each do |message| %>
+      <h3 id="error"><%= message %></h3>
+    <% end %>
+    </ul>
+  <% end %>
+
+
+  <label id="label">Name</label><br>
+  <%= f.text_field :name %><br><br>
+
+  <label id="label">Premiere Date </label><br>
+  <%= f.date_field :premiered_on %><br><br>
+
+  <label id="label">IMDb</label><br>
+  <%= f.number_field :imdb, in: 0.0..10.0, step: 0.1 %><br>
+
+  <label id="label">Poster Link</label><br>
+  <%= f.url_field :poster, size: "30*2" %><br><br>
+
+  <label id="label">IMDb Link</label><br>
+  <%= f.url_field :link_imdb, size: "30*2" %><br><br>
+
+  <label id="label">Trailer Link</label><br>
+  <%= f.url_field :trailer, size: "30*2" %><br><br>
+
+  <%= f.submit %>
+<% end %>
+
+</h5>

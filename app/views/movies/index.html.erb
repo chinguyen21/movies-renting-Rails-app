@@ -1,0 +1,10 @@
+<h6><%= link_to 'Homepage', users_path %></h6>
+
+<h1>All movies</h1>
+<h3>
+<% @movies.each do |movie| %>
+  <%= link_to movie.name, movie_path(movie) %><br><br>
+<% end %>
+</h3>
+
+
